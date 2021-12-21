@@ -26,7 +26,7 @@ public class TeacherController
 		
 	}
 	
-	@GetMapping("/getAll/{tid}")
+	@GetMapping("/getAll/{id}")
 	public Teacher getTeacher(@PathVariable int tid)
 	{
 		return tr.findById(tid).orElse(null);
@@ -49,7 +49,7 @@ public class TeacherController
 		return tr.findAll();
 	}
 	
-	@DeleteMapping("/deleteTeacher/{Id}")
+	@DeleteMapping("/deleteTeacher/{id}")
 	public List<Teacher> deleteTeacher(@PathVariable int tid)
 	{
 	   tr.delete(tr.getById(tid));	
