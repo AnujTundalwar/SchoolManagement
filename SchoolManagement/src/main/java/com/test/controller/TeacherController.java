@@ -42,7 +42,7 @@ public class TeacherController
 			return "failed";
 	}
 	
-	@PutMapping("/updateUser")
+	@PutMapping("/updateUserr")
 	public List<Teacher> updateTeacher(@RequestBody Teacher teacher)
 	{
 		tr.save(teacher);
