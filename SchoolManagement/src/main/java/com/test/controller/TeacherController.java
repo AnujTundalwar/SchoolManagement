@@ -2,6 +2,7 @@ package com.test.controller;
 
 import java.util.List;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.test.entity.Teacher;
 import com.test.repository.TeacherRepository;
 
+import ch.qos.logback.classic.Logger;
+
 @RestController
 public class TeacherController 
 {
-	@Autowired
+	@Autowired//njnj
 	TeacherRepository tr;
+	
+	
 	@GetMapping("/getAll")
 	public List<Teacher> getAllTeacher()
 	{
@@ -29,6 +34,7 @@ public class TeacherController
 	@GetMapping("/getAll/{id}")
 	public Teacher getTeacher(@PathVariable int tid)
 	{
+		
 		return tr.findById(tid).orElse(null);
 	}
 	
