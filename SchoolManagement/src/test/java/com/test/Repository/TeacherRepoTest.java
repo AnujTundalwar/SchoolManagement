@@ -1,4 +1,4 @@
-package com.test;
+package com.test.Repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,15 +12,25 @@ import com.test.entity.Teacher;
 import com.test.repository.TeacherRepository;
 
 @SpringBootTest
-class SchoolManagementApplicationTests {
-	
+public class TeacherRepoTest 
+{
 	@Autowired
 	TeacherRepository tr;
-
 	@Test
-	void contextLoads() {
+	void isPersonExistById()
+	{
+	Boolean actual=tr.existsById(1);
+	//actual=false;
+	assertThat(actual).isTrue();
 	}
 	
-	
+	@Test
+	void finfAllTest()
+	{
+		List<Teacher> actual=tr.findAll();
+		//actual=null;
+		assertThat(actual).isNotNull().isNotEmpty();
+		
+	}
 
 }
