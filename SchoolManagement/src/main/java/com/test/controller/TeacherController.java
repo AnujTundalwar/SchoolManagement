@@ -21,7 +21,7 @@ import ch.qos.logback.classic.Logger;
 public class TeacherController 
 {
 
-	@Autowired//commenting from anuj
+	@Autowired//commenting from anuj and then shailesh
 
 	TeacherRepository tr;
 	
