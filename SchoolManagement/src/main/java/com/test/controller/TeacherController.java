@@ -20,7 +20,7 @@ import ch.qos.logback.classic.Logger;
 @RestController
 public class TeacherController 
 {
-	@Autowired//njnj
+	@Autowired//commenting from anuj
 	TeacherRepository tr;
 	
 	
